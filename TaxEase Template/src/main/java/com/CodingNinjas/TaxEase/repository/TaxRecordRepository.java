@@ -9,6 +9,15 @@ import java.util.List;
 @Repository
 public interface TaxRecordRepository extends JpaRepository<TaxRecord, Long> {
 
+    List<TaxRecord> findByUserName(String username);
+
+// Provided by JPA inbuilt
+    //    TaxRecord findById(Long id);
+//
+//    List<TaxRecord> findAll();
+//
+//    void deleteById(Long id);
+
    /*
      1. Create a method with name "findByUserName" and use derived query to find the list of
         all the tax records by the given username.

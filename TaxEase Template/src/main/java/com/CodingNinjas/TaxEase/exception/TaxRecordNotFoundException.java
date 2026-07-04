@@ -1,10 +1,16 @@
 package com.CodingNinjas.TaxEase.exception;
 
+import com.CodingNinjas.TaxEase.dto.TaxRecordDto;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 @ResponseStatus(HttpStatus.NOT_FOUND)
-public class TaxRecordNotFoundException {
+public class TaxRecordNotFoundException extends RuntimeException {
+
+
+    public TaxRecordNotFoundException(String message) {
+        super(message);
+    }
 
     /*
         This is an exception class, which will be called when a tax record is not found by id.

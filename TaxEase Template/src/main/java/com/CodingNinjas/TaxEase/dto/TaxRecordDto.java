@@ -1,6 +1,12 @@
 package com.CodingNinjas.TaxEase.dto;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class TaxRecordDto {
 
     /* This is the taxRecord Dto class, and you need to complete the class by doing the following:
@@ -15,4 +21,8 @@ public class TaxRecordDto {
      b. Use lombok annotations for getter, setters and constructors
      */
 
+    String userName;
+    String taxYear;
+    int Income;
+    int deductions;
 }
