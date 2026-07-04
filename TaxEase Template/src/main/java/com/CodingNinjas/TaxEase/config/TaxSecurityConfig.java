@@ -25,7 +25,7 @@ public class TaxSecurityConfig {
                 .anyRequest()
                 .authenticated()
                 .and()
-                .formLogin();
+                .httpBasic();
         return http.build();
     }
 
